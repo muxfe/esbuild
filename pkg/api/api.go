@@ -819,12 +819,104 @@ type (
 	SFor      = js_ast.SFor
 	SReturn   = js_ast.SReturn
 	SThrow    = js_ast.SThrow
-	STry      = js_ast.STry
-	SSwitch   = js_ast.SSwitch
 
 	// 其他重要类型
 	Binding = js_ast.Binding
 	Arg     = js_ast.Arg
 	Fn      = js_ast.Fn
 	Class   = js_ast.Class
+
+	// 导入导出语句类型
+	SImport        = js_ast.SImport
+	SExportClause  = js_ast.SExportClause
+	SExportFrom    = js_ast.SExportFrom
+	SExportDefault = js_ast.SExportDefault
+	SExportStar    = js_ast.SExportStar
+	SExportEquals  = js_ast.SExportEquals
+
+	// 符号和引用类型
+	Symbol = ast.Symbol
+	Ref    = ast.Ref
+	Loc    = logger.Loc
+
+	// 绑定相关类型
+	BIdentifier     = js_ast.BIdentifier
+	BArray          = js_ast.BArray
+	BObject         = js_ast.BObject
+	ArrayBinding    = js_ast.ArrayBinding
+	PropertyBinding = js_ast.PropertyBinding
+
+	// 更多表达式类型
+	EDot               = js_ast.EDot
+	EIndex             = js_ast.EIndex
+	EArrow             = js_ast.EArrow
+	EJSXElement        = js_ast.EJSXElement
+	EJSXText           = js_ast.EJSXText
+	EBigInt            = js_ast.EBigInt
+	ERegExp            = js_ast.ERegExp
+	ETemplate          = js_ast.ETemplate
+	ESpread            = js_ast.ESpread
+	EPrivateIdentifier = js_ast.EPrivateIdentifier
+	EImportIdentifier  = js_ast.EImportIdentifier
+
+	// 更多语句类型
+	SForIn     = js_ast.SForIn
+	SForOf     = js_ast.SForOf
+	SDoWhile   = js_ast.SDoWhile
+	SWhile     = js_ast.SWhile
+	SWith      = js_ast.SWith
+	STry       = js_ast.STry
+	SSwitch    = js_ast.SSwitch
+	SBreak     = js_ast.SBreak
+	SContinue  = js_ast.SContinue
+	SLabel     = js_ast.SLabel
+	SEnum      = js_ast.SEnum
+	SNamespace = js_ast.SNamespace
+
+	// 作用域相关类型
+	ScopeMember    = js_ast.ScopeMember
+	DeclaredSymbol = js_ast.DeclaredSymbol
+
+	// 导入导出相关类型
+	ImportRecord = ast.ImportRecord
+	NamedImport  = js_ast.NamedImport
+	NamedExport  = js_ast.NamedExport
+	ClauseItem   = js_ast.ClauseItem
+
+	// 实用类型
+	Decl       = js_ast.Decl
+	Property   = js_ast.Property
+	Part       = js_ast.Part
+	Dependency = js_ast.Dependency
+
+	// Logger 类型
+	Range  = logger.Range
+	Span   = logger.Span
+	Source = logger.Source
+
+	// 枚举和常量类型
+	ScopeKind      = js_ast.ScopeKind
+	StrictModeKind = js_ast.StrictModeKind
+	LocalKind      = js_ast.LocalKind
+	ConstValueKind = js_ast.ConstValueKind
+	ModuleType     = js_ast.ModuleType
+	ExportsKind    = js_ast.ExportsKind
+	OpCode         = js_ast.OpCode
+	L              = js_ast.L
+
+	// 常量值
+	ConstValue    = js_ast.ConstValue
+	TSEnumValue   = js_ast.TSEnumValue
+	SymbolUse     = js_ast.SymbolUse
+	SymbolCallUse = js_ast.SymbolCallUse
+
+	// TypeScript 相关类型
+	EnumValue          = js_ast.EnumValue
+	TSNamespaceScope   = js_ast.TSNamespaceScope
+	TSNamespaceMember  = js_ast.TSNamespaceMember
+	TSNamespaceMembers = js_ast.TSNamespaceMembers
+
+	// 其他重要类型
+	EInlinedEnum = js_ast.EInlinedEnum
+	TemplatePart = js_ast.TemplatePart
 )
