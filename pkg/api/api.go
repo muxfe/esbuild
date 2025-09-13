@@ -836,8 +836,6 @@ type (
 
 	// 符号和引用类型
 	Symbol = ast.Symbol
-	Ref    = ast.Ref
-	Loc    = logger.Loc
 
 	// 绑定相关类型
 	BIdentifier     = js_ast.BIdentifier
@@ -920,3 +918,61 @@ type (
 	EInlinedEnum = js_ast.EInlinedEnum
 	TemplatePart = js_ast.TemplatePart
 )
+
+// SymbolKind 常量
+const (
+	SymbolUnbound SymbolKind = iota
+	SymbolHoisted
+	SymbolHoistedFunction
+	SymbolCatchIdentifier
+	SymbolGeneratorOrAsyncFunction
+	SymbolArguments
+	SymbolClass
+	SymbolClassInComputedPropertyKey
+	SymbolPrivateField
+	SymbolPrivateMethod
+	SymbolPrivateGet
+	SymbolPrivateSet
+	SymbolPrivateGetSetPair
+	SymbolPrivateStaticField
+	SymbolPrivateStaticMethod
+	SymbolPrivateStaticGet
+	SymbolPrivateStaticSet
+	SymbolPrivateStaticGetSetPair
+	SymbolLabel
+	SymbolTSEnum
+	SymbolTSNamespace
+	SymbolImport
+	SymbolConst
+	SymbolInjected
+	SymbolMangledProp
+	SymbolGlobalCSS
+	SymbolLocalCSS
+	SymbolOther
+)
+
+// SymbolFlags 常量
+const (
+	MustNotBeRenamed SymbolFlags = 1 << iota
+	MustStartWithCapitalLetterForJSX
+	DidKeepName
+	PrivateSymbolMustBeLowered
+	RemoveOverwrittenFunctionDeclaration
+	DidWarnAboutCommonJSInESM
+	CouldPotentiallyBeMutated
+	WasExported
+	IsEmptyFunction
+	IsIdentityFunction
+	CallCanBeUnwrappedIfUnused
+)
+
+// 类型别名 - 确保这些类型在 api 包中可用
+type (
+	SymbolKind  = ast.SymbolKind
+	SymbolFlags = ast.SymbolFlags
+	Ref         = ast.Ref
+	Loc         = logger.Loc
+)
+
+// 导出 InvalidRef 常量
+var InvalidRef Ref = ast.InvalidRef
